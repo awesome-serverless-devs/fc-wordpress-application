@@ -1,0 +1,22 @@
+Type: Application
+Name: fc-wordpress-app
+Provider:
+  - Alibaba
+Version: 0.0.5
+Description:
+  zh: 阿里云函数计算 web 单体应用，可以快速部署 wordpress 应用到函数计算
+HomePage: https://www.aliyun.com/
+Tags:
+  - zh: 函数计算
+    en: Function Calculation
+Category: BaaS
+Commands:
+  deploy:
+    zh: 部署函数
+  remove:
+    zh: 移除函数
+Service:
+  函数计算:
+    Authorities:
+      - zh: 函数计算全部权限
+        en: FC all permissions
