@@ -1,1 +1,1 @@
-# fc-php-runtime-component
+# fc-wordpress-application

@@ -1,0 +1,27 @@
+wordpressApp:
+  Component: web-framework
+  Provider: alibaba
+  Access: default
+  Properties:
+    framework: wordpress
+    region: cn-hangzhou
+    service:
+      name: qianfeng-fc-php-app-test
+      description: fc-php
+      logConfig: auto
+    function:
+      name: test
+      timeout: 60
+      memorySize: 1024
+      customContainerConfig:
+        image: registry.cn-hangzhou.aliyuncs.com/fc-demo/fc-php-application-runtime-image:v1
+        command: '["./scripts/start.sh"]'
+      caPort: 8080
+      # concurrency: 10
+      code:
+        src: ./conf
+    customDomains:
+      - domainName: auto
+        protocol: HTTP
+        routeConfigs:
+          - path: '/*'
